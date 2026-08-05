@@ -2,6 +2,8 @@
 
 <img src="portrait.svg" width="460" alt="Nikhil Reddy Modugu — ASCII portrait">
 
+### Nikhil Reddy Modugu
+
 </div>
 
 <br>
@@ -11,31 +13,41 @@
 
 <br>
 
-**stack** — <samp>Java · Python · JavaScript · React.js · Node.js · Express.js · FastAPI · MongoDB · MySQL · LangChain</samp>
-
-<br>
-
 <div align="center">
-<img src="stats.svg" alt="contribution stats">
-<br>
-<img src="streak.svg" alt="streak">
+
+<samp>Java · Python · JavaScript · React.js · Node.js · Express.js · FastAPI · MongoDB · MySQL · LangChain</samp>
+
 </div>
 
-<br>
+<hr>
 
 <div align="center">
-<img src="langs.svg" alt="top languages">
-</div>
 
+<img src="stats.svg" width="460" alt="contribution stats">
 <br>
+<img src="streak.svg" width="400" alt="streak">
+
+</div>
 
 <div align="center">
-<img src="year.svg" alt="year at a glance">
+
+<img src="langs.svg" width="460" alt="top languages">
+
 </div>
 
-<br>
+<div align="center">
 
-connect — <samp>linkedin.com/in/nikhil-reddy-modugu</samp>
+<img src="year.svg" width="420" alt="year at a glance">
+
+</div>
+
+<hr>
+
+<div align="center">
+
+[GitHub](https://github.com/Nikhilreddy1011) · [LinkedIn](https://linkedin.com/in/nikhil-reddy-modugu)
+
+</div>
 
 <!--
   All graphics on this page are generated inside this repository by a
