@@ -55,20 +55,29 @@ def remove_background(img: Image.Image) -> Image.Image:
 
 
 def enhance_contrast(cv_img: np.ndarray) -> np.ndarray:
-    """Bilateral filter (smooth skin, keep edges) + CLAHE (local contrast)."""
+    """Bilateral filter (smooth skin, keep edges) + CLAHE (local contrast).
+
+    clipLimit tuned down from the original 3.0 — at 3.0 the curve below
+    crushes mid-tones (skin) into the same density band as hair, losing
+    the separation between features. 1.8 keeps more gradation.
+    """
     smoothed = cv2.bilateralFilter(cv_img, d=9, sigmaColor=75, sigmaSpace=75)
     gray = cv2.cvtColor(smoothed, cv2.COLOR_BGR2GRAY)
 
-    clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
+    clahe = cv2.createCLAHE(clipLimit=1.8, tileGridSize=(8, 8))
     return clahe.apply(gray)
 
 
 def apply_darkening_curve(gray: np.ndarray) -> np.ndarray:
-    """(v/255)^1.7 — the fix. Without this the face renders washed out
-    and featureless; this is what makes glasses/brows/lips survive.
+    """(v/255)^1.15 — gentler than the original guide's 1.7.
+
+    1.7 was tuned for a different reference photo; on a well-lit, high-
+    contrast source it over-darkens mid-tones and crushes facial detail
+    into solid blocks. 1.15 keeps skin/hair/shadow separated while still
+    pulling darks down enough for glasses/brows/lips to survive.
     """
     normalized = gray.astype(np.float64) / 255.0
-    curved = np.power(normalized, 1.7)
+    curved = np.power(normalized, 1.15)
     return (curved * 255).astype(np.uint8)
 
 
@@ -163,7 +172,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", required=True, help="path to headshot photo")
     ap.add_argument("--output", default="portrait.svg")
-    ap.add_argument("--cols", type=int, default=90)
+    ap.add_argument("--cols", type=int, default=100)
     ap.add_argument("--display-width", type=int, default=460)
     ap.add_argument(
         "--font",
