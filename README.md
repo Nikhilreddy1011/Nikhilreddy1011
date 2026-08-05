@@ -2,10 +2,6 @@
 
 <img src="banner.svg" width="100%" alt="Nikhil Reddy Modugu">
 
-<br/><br/>
-
-<img src="portrait.svg" width="380" alt="Nikhil Reddy Modugu — self-typing ASCII portrait">
-
 </div>
 
 <br>
@@ -21,7 +17,7 @@
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nikhil-reddy-modugu)
 [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Nikhilreddy1011)
 [![LeetCode](https://img.shields.io/badge/-LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/GB2023003605/)
-[![Email](https://img.shields.io/badge/-Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nikhilreddymodugu123@gmail.com)
+[![Email](https://img.shields.io/badge/-Email-EA4365?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nikhilreddymodugu123@gmail.com)
 
 </div>
 
@@ -64,17 +60,16 @@ MongoDB&nbsp;&nbsp;·&nbsp;&nbsp;MySQL&nbsp;&nbsp;·&nbsp;&nbsp;JWT&nbsp;&nbsp;�
 
 <hr>
 
-### Activity
+### GitHub Stats
 
 <div align="center">
 
-<img src="stats.svg" width="460" alt="contribution stats">
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=Nikhilreddy1011&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=e94560&icon_color=3fb950&text_color=e6edf3" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nikhilreddy1011&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=e94560&text_color=e6edf3" />
+
 <br>
-<img src="streak.svg" width="400" alt="streak">
-<br><br>
-<img src="langs.svg" width="460" alt="top languages">
-<br><br>
-<img src="year.svg" width="420" alt="year at a glance">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Nikhilreddy1011&theme=dark&hide_border=true&background=0d1117&ring=3fb950&fire=e94560&currStreakLabel=e6edf3" />
 
 </div>
 
