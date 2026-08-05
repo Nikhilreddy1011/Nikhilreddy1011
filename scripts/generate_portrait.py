@@ -116,7 +116,12 @@ def build_svg(lines: list[str], display_width: int = 460, embed_font_path: str |
 
     svg_w = cols * CHAR_W
     svg_h = rows * FONT_SIZE * 1.0
-    scale = display_width / svg_w
+    # NOTE: the SVG's own width/height now equal its native pixel size
+    # (viewBox == declared size, 1:1). Sizing on the page is controlled
+    # entirely by the <img width="..."> in the README — a single clean
+    # downscale step, instead of the SVG declaring one size and the
+    # README overriding it with another (double-downscale = the color
+    # fringing/muddiness you saw).
 
     font_face = ""
     if embed_font_path:
@@ -135,7 +140,8 @@ def build_svg(lines: list[str], display_width: int = 460, embed_font_path: str |
 
     parts = [
         f'<svg viewBox="0 0 {svg_w:.1f} {svg_h:.1f}" '
-        f'width="{display_width}" height="{svg_h * scale:.1f}" '
+        f'width="{svg_w:.1f}" height="{svg_h:.1f}" '
+        f'shape-rendering="crispEdges" text-rendering="optimizeLegibility" '
         f'xmlns="http://www.w3.org/2000/svg">',
         font_face,
     ]
@@ -155,10 +161,10 @@ def build_svg(lines: list[str], display_width: int = 460, embed_font_path: str |
                  begin="{begin}" dur="0.35s" fill="freeze" />
       </rect>
     </clipPath>
-    <text x="0" y="{y:.1f}" font-size="{FONT_SIZE}" fill="currentColor"
+    <text x="0" y="{y:.1f}" font-size="{FONT_SIZE}" fill="#000000"
           xml:space="preserve" clip-path="url(#clip{i})">{escaped}</text>
     <rect x="0" y="{y - FONT_SIZE:.1f}" width="{CHAR_W:.2f}" height="{FONT_SIZE:.1f}"
-          fill="currentColor" opacity="0.6">
+          fill="#000000" opacity="0.6">
       <animate attributeName="x" from="0" to="{line_w:.1f}"
                begin="{begin}" dur="0.35s" fill="freeze" />
       <set attributeName="opacity" to="0" begin="{i * 0.09 + 0.35:.2f}s" fill="freeze" />
