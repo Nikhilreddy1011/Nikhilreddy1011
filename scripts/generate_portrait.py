@@ -143,6 +143,7 @@ def build_svg(lines: list[str], display_width: int = 460, embed_font_path: str |
         f'width="{svg_w:.1f}" height="{svg_h:.1f}" '
         f'shape-rendering="crispEdges" text-rendering="optimizeLegibility" '
         f'xmlns="http://www.w3.org/2000/svg">',
+        f'<rect width="100%" height="100%" fill="#ffffff"/>',
         font_face,
     ]
 
