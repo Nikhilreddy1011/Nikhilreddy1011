@@ -1,0 +1,10 @@
+# Only needed locally, to generate the ASCII portrait from a photo.
+# The stats workflow (generate_stats.py) uses ONLY the Python standard
+# library on purpose, so CI never has a dependency to break.
+pillow
+numpy
+opencv-python-headless
+rembg
+onnxruntime
+fonttools
+brotli
