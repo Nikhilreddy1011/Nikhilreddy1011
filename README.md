@@ -246,9 +246,8 @@ Developed QuizGen, an AI-powered full-stack application for dynamic quiz generat
 ## GitHub Trophies
 
 <p align="center">
-  <img src="https://github-profile-trophy-liard-delta.vercel.app/?username=Nikhilreddy1011&theme=discord&no-frame=true&no-bg=true&margin-w=8&row=1" width="90%" alt="GitHub Trophies"/>
+  <img src="./trophy.svg" width="90%" alt="GitHub Trophies"/>
 </p>
-
 ---
 
 ## Contribution Activity
